@@ -11,6 +11,7 @@ const LoginRoute=require('./routes/Login');
 
 
 dotenv.config();
+const port = process.env.PORT;
 
 //Connect To DB
 mongoose.connect(process.env.DB_CONNECTION,
@@ -37,5 +38,5 @@ app.get('/', (req,res)=> {
 
 
 
-app.listen(3000 , ()=> console.log('Server Up and running'));
+app.listen(port , ()=> console.log('Server Up and running'));
 //module.exports=router;
